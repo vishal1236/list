@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel=”stylesheet” href=”https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css”rel=”nofollow” integrity=”sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm” crossorigin=”anonymous”>
+    <link rel="stylesheet" href="style.css">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<style>
+   body{
+      background-color: rgb(76, 76, 129);
+   }
+
+   .nav{
+      background-color: rgb(95, 95, 113);
+   }
+
+   #txtData{
+      color: red
+   }
+   #to_do_list{
+      color: yellow;
+   }
+</style>
+<body>
+
+
+          <a class="navbar-brand" href="#">To DO</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+        </ul>
+      </div>
+    </nav>
+
+       
+
+
+
+<div class="input">
+   <input type="text" placeholder="Please Enter your Task Here.." id="txtData" style="MARGIN-top: 6%;">
+</div>
+   <button onclick="todoList()">AddTaskToDo</button>
+   
+   <ul id="to_do_list">
+   </ul>
+</body>
+<script>
+   function todoList() {
+      const myTask = document.getElementById('txtData');
+      const addToDoList = document.getElementById('to_do_list');
+      let originalValue = `<li> ${myTask.value} </li>`;
+      myTask.value = '';
+      addToDoList.insertAdjacentHTML('beforeend', originalValue);
+   }
+</script>
+</html>
